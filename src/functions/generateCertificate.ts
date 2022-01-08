@@ -1,13 +1,11 @@
-
+import chromium from "chrome-aws-lambda";
+import path from "path";
+import handlebars from "handlebars";
+import fs from "fs";
+import dayjs from "dayjs";
 import { S3 } from "aws-sdk";
-import * as path from "path";
-import * as fs from "fs";
-
-import { chromium } from "chrome-aws-lambda";
 
 import { document } from "../utils/dynamodbClient";
-import * as handlebars from "handlebars";
-import * as dayjs from "dayjs";
 
 interface ICreateCertificate {
   id: string;
